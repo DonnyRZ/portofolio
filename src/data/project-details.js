@@ -69,7 +69,7 @@ window.projectDetails = {
     },
     overview: [
       "Project ini adalah clinical coding assistant, bukan diagnosis AI dan bukan official BPJS grouper. Sistem membantu membaca dokumentasi klinis, mengekstrak evidence, memberi saran kode, lalu menempatkan semua output ke review queue.",
-      "Nilai utamanya ada pada workflow yang aman, yaitu structured output, master data validation, evidence alignment, human approval, reference versioning, audit trail, dan privacy control untuk data klinis."
+      "Workflow mengutamakan structured output, master data validation, evidence alignment, human approval, reference versioning, audit trail, dan privacy control untuk data klinis."
     ],
     flow: [
       ["Clinical note input", "User memasukkan SOAP, discharge summary, OCR text, atau supporting note dari episode perawatan."],
@@ -127,7 +127,7 @@ window.projectDetails = {
     },
     overview: [
       "Project ini tidak berhenti pada angka forecast. Sistem menghubungkan forecasting dengan inventory policy agar planner bisa melihat risiko stockout, overstock, reorder point, dan purchase recommendation.",
-      "Data diposisikan sebagai ERP-style sample data. Demand reconstruction dibuat sebagai estimasi operasional untuk membantu simulasi planning, bukan klaim ground truth lost sales."
+      "Data menggunakan ERP-style sample data. Demand reconstruction dibuat sebagai estimasi operasional untuk membantu planning scenario, bukan klaim ground truth lost sales."
     ],
     flow: [
       ["ERP-style ingestion", "Pipeline membaca sales order, delivered quantity, purchase order, inventory movement, SKU metadata, lead time, dan planning period."],
@@ -185,7 +185,7 @@ window.projectDetails = {
     },
     overview: [
       "Project ini menggunakan transaction analytics untuk menjawab dua kebutuhan retail, yaitu memahami kelompok customer dan memberi rekomendasi produk yang relevan. RFM digunakan untuk segmentasi, sedangkan item-based collaborative filtering digunakan sebagai baseline recommendation.",
-      "Sistem sengaja diposisikan sebagai production-grade blueprint, bukan klaim personalization komersial sempurna. Fokusnya adalah end-to-end ML system yang mencakup feature pipeline, model artifact, API, console, evaluation, monitoring, dan fallback logic."
+      "Sistem berfokus pada end-to-end ML workflow yang mencakup feature pipeline, model artifact, API, console, evaluation, monitoring, fallback logic, dan batasan personalisasi yang jelas."
     ],
     flow: [
       ["Transaction ingestion", "Pipeline membaca invoice, customer ID, product ID, quantity, unit price, invoice date, dan country/store context."],
@@ -242,8 +242,8 @@ window.projectDetails = {
       tech: "Python, LightGBM, SMOTENC, calibration, SHAP/reason codes, FastAPI, React, BigQuery, Cloud SQL, Cloud Run."
     },
     overview: [
-      "Project ini adalah simulated credit scoring system untuk menunjukkan workflow risk decisioning end-to-end. Halaman portfolio memakai nama umum agar recruiter bank langsung memahami konteksnya.",
-      "Label benchmark diperlakukan sebagai proxy development signal, bukan default-risk real-world. Karena itu sistem menonjolkan target definition, leakage control, validation, cost assumptions, dan limitation agar defensible saat interview."
+      "Project ini membangun workflow risk decisioning end-to-end untuk menilai risiko kredit applicant, mengubah skor model menjadi keputusan approve/review/decline, dan menyediakan reason codes untuk proses underwriting.",
+      "Sistem menonjolkan target definition, leakage control, validation, cost assumptions, audit trail, dan model limitation agar keputusan risiko dapat dijelaskan oleh risk analyst, underwriter, dan model risk reviewer."
     ],
     flow: [
       ["Applicant input", "Applicant data masuk melalui API atau batch scoring dengan schema validation untuk numeric, categorical, dan missing fields."],
@@ -263,7 +263,7 @@ window.projectDetails = {
       ["Monitoring / Governance", "Model registry, challenger comparison, drift PSI, decision distribution, reason code distribution, override trend, and rollback controls."]
     ],
     aiDetails: [
-      ["Target definition", "Output model disebut probability_of_high_risk_applicant. Karena dataset benchmark tidak menyediakan repayment/default history, label diperlakukan sebagai proxy untuk demonstrasi architecture."],
+      ["Target definition", "Output model disebut probability_of_high_risk_applicant. Karena dataset benchmark tidak menyediakan repayment/default history, label diperlakukan sebagai proxy untuk pengembangan risk scoring workflow."],
       ["LightGBM model", "LightGBM dipilih sebagai model utama karena efektif untuk data tabular, menangani non-linear relationship, dan sering kuat dibanding baseline seperti logistic regression atau random forest."],
       ["SMOTENC and calibration", "SMOTENC membantu mengatasi class imbalance pada data yang punya fitur numeric dan categorical. Calibration membantu score lebih layak dipakai sebagai probability untuk policy threshold."],
       ["Reason codes", "Reason codes dibuat dari kontribusi fitur sehingga underwriter dapat melihat faktor yang mendorong score, bukan hanya menerima angka risk probability."]
@@ -287,7 +287,7 @@ window.projectDetails = {
       ["Security", "OAuth/IAP/IAM access, Secret Manager, least-privilege service account, encrypted storage, dan audit log access control."],
       ["Deployment", "FastAPI scoring service di Cloud Run, model artifact di Cloud Storage, logs di BigQuery, registry metadata di Cloud SQL, dan observability via Cloud Logging/Monitoring."]
     ],
-    limitations: "Benchmark label adalah proxy dan bukan real default atau repayment label. Sistem belum memakai bureau score, repayment history, delinquency events, exposure, tenor, collateral, atau post-disbursement outcome. Limitasi ini ditulis eksplisit agar modeling logic tetap defensible."
+    limitations: "Benchmark label adalah proxy dan bukan real default atau repayment label. Sistem belum memakai bureau score, repayment history, delinquency events, exposure, tenor, collateral, atau post-disbursement outcome. Limitasi ini dicatat agar interpretasi model tetap sesuai dengan cakupan data."
   },
   "aluminium-market-signal": {
     title: "Aluminium Market Signal",
