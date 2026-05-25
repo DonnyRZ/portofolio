@@ -40,6 +40,10 @@ function renderProjectDetail() {
   document.getElementById("detailIndustry").textContent = project.industry;
   document.getElementById("detailTitle").textContent = project.title;
   document.getElementById("detailSummary").textContent = project.summary;
+  document.getElementById("detailCompany").textContent = project.company || "Portfolio case study";
+  document.getElementById("detailPeriod").textContent = project.period || "Project period";
+  document.getElementById("detailRepository").textContent = project.repository || "Private/company repository";
+  document.getElementById("detailArtifacts").textContent = project.artifacts || "Non-confidential case study and technical artifacts";
   document.getElementById("snapshotProblem").textContent = project.snapshot.problem;
   document.getElementById("snapshotOutput").textContent = project.snapshot.output;
   document.getElementById("snapshotUsers").textContent = project.snapshot.users;

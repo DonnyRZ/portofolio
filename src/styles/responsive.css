@@ -1,6 +1,7 @@
 @media (max-width: 920px) {
   .hero-grid,
   .section-head,
+  .experience-item,
   .focus-layout,
   .contact-grid {
     grid-template-columns: 1fr;

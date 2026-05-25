@@ -1,13 +1,17 @@
 window.projectDetails = {
   "b2b-meeting-assistant": {
     title: "B2B Meeting Assistant",
-    industry: "B2B / Konsultan",
+    industry: "B2B SaaS",
+    company: "Steradian",
+    period: "Agu 2025 - Nov 2025",
+    repository: "Private/company repository",
+    artifacts: "Public case study, realtime transcript workflow, API contract, dashboard/console preview",
     summary: "Asisten meeting untuk membantu tim sales, konsultan, project manager, dan business analyst menangkap keputusan, risiko, action item, dan follow-up saat rapat B2B berjalan.",
     snapshot: {
       problem: "Meeting klien sering panjang, konteks berubah cepat, dan keputusan penting mudah tidak tercatat.",
       output: "Live meeting assistance, action item, decision log, risk note, clarification prompt, recap, dan follow-up draft.",
       users: "Sales, account manager, consultant, project manager, business analyst, dan customer success.",
-      tech: "Electron desktop app, realtime transcription, LLM action layer, backend API, Cloud SQL, BigQuery, Cloud Run."
+      tech: "GPT-5 API, GPT Realtime, Electron desktop app, React, TypeScript, backend API, Cloud SQL, BigQuery, Cloud Run."
     },
     overview: [
       "Project ini adalah meeting intelligence assistant untuk rapat B2B seperti discovery call, steering committee, workshop, FGD, dan stakeholder discussion. Fokusnya bukan menggantikan user saat meeting, tetapi membantu user menangkap konteks penting secara real-time dan mengubahnya menjadi artifact yang bisa direview.",
@@ -25,7 +29,7 @@ window.projectDetails = {
     techStack: [
       ["Frontend / UI", "Electron desktop app dengan React + TypeScript untuk live side panel, mini mode, expanded mode, dan artifact review."],
       ["Backend / API", "Node.js/TypeScript atau FastAPI service untuk meeting session lifecycle, realtime token, AI action orchestration, dan artifact API."],
-      ["ML / LLM", "Realtime transcription model untuk live transcript, LLM realtime/context untuk memahami percakapan, dan LLM structured action untuk summary, decision, risk, action item, dan email draft."],
+      ["ML / LLM", "GPT Realtime untuk live transcript/realtime assistance dan GPT-5 API untuk structured action seperti summary, decision, risk, action item, dan email draft."],
       ["Data & Storage", "Cloud SQL PostgreSQL untuk workspace/session/artifact metadata, Cloud Storage untuk artifact file, dan BigQuery untuk event log."],
       ["Cloud / Deployment", "Cloud Run untuk backend API, Cloud Run Jobs untuk retention dan evaluation jobs, Secret Manager untuk API keys, dan Cloud Scheduler untuk scheduled jobs."],
       ["Monitoring / Governance", "Cloud Logging, Cloud Monitoring, prompt versioning, consent status, transcript rejection log, and audit event tracking."]
@@ -59,13 +63,17 @@ window.projectDetails = {
   },
   "bpjs-claim-assistant": {
     title: "BPJS Claim Assistant",
-    industry: "Kesehatan",
+    industry: "Healthcare / BPJS Claim",
+    company: "Steradian",
+    period: "Apr 2025 - Jul 2025",
+    repository: "Private/company repository",
+    artifacts: "Public case study, API contract, audit logging flow, architecture diagram, structured output schema",
     summary: "AI-assisted coding workflow untuk membantu coder atau claim officer membaca dokumentasi klinis, menyiapkan saran ICD, memeriksa evidence, dan menilai claim readiness dengan final approval tetap pada manusia.",
     snapshot: {
       problem: "Clinical coding dan klaim BPJS membutuhkan evidence yang jelas, validasi kode, dan review manusia karena risikonya tinggi.",
       output: "SOAP summary, ICD-10 suggestion, ICD-9-CM procedure suggestion, candidate INA-CBG explanation, validation status, dan review queue.",
       users: "Clinical coder, claim officer, medical record staff, hospital operations, dan supervisor klaim.",
-      tech: "LLM long-context, JSON schema validation, ICD master data, human review workflow, audit log, Cloud Run, BigQuery."
+      tech: "Gemini API, Google Cloud Speech-to-Text, JSON schema validation, ICD master data, human review workflow, audit log, Cloud Run, BigQuery."
     },
     overview: [
       "Project ini adalah clinical coding assistant, bukan diagnosis AI dan bukan official BPJS grouper. Sistem membantu membaca dokumentasi klinis, mengekstrak evidence, memberi saran kode, lalu menempatkan semua output ke review queue.",
@@ -83,7 +91,7 @@ window.projectDetails = {
     techStack: [
       ["Frontend / UI", "React + TypeScript clinical coding console untuk case list, SOAP view, suggested codes, evidence panel, validation status, dan approval workflow."],
       ["Backend / API", "Django/FastAPI-style backend untuk document ingestion, SOAP generation, ICD suggestion, validation, review action, dan audit API."],
-      ["ML / LLM", "LLM long-context untuk clinical summarization dan structured extraction model menghasilkan JSON agar validasi otomatis bisa dilakukan."],
+      ["ML / LLM", "Gemini API untuk clinical summarization dan structured extraction, Google Cloud Speech-to-Text untuk transcript workflow, dan JSON schema validation untuk validasi otomatis."],
       ["Data & Storage", "Cloud SQL untuk episode, code suggestion, approval metadata, prompt registry, dan reference version Cloud Storage untuk document artifact."],
       ["Cloud / Deployment", "Cloud Run untuk backend service, Cloud Run Jobs untuk batch/evaluation jobs, Secret Manager untuk credentials, dan Cloud Scheduler untuk scheduled evaluation."],
       ["Monitoring / Governance", "BigQuery untuk audit/evaluation logs, prompt registry, master data versioning, PHI redaction log, RBAC, MFA, dan Cloud Monitoring."]
@@ -117,7 +125,11 @@ window.projectDetails = {
   },
   "demand-forecasting-system": {
     title: "Demand Forecasting System",
-    industry: "Supply Chain",
+    industry: "Demand Planning",
+    company: "Juicy Juice (freelance)",
+    period: "Dec 2024 - Mar 2025",
+    repository: "Private/company repository",
+    artifacts: "Public case study, forecasting workflow, evaluation summary, architecture diagram, monitoring plan",
     summary: "Forecasting dan inventory planning system untuk membantu planner memperkirakan demand, menghitung safety stock, reorder point, dan rekomendasi pembelian dari ERP-style sales dan purchase data.",
     snapshot: {
       problem: "Demand tidak stabil, beberapa SKU intermittent, stockout bisa menyembunyikan demand, dan keputusan reorder sering terlambat.",
@@ -150,7 +162,7 @@ window.projectDetails = {
       ["XGBoost forecasting", "Model gradient boosting berbasis decision tree digunakan untuk demand tabular dengan fitur lag, rolling statistics, calendar features, SKU attributes, dan purchase context."],
       ["Croston SBA", "Croston SBA digunakan untuk SKU dengan demand jarang/intermittent, karena metode forecasting biasa sering bias saat banyak periode bernilai nol."],
       ["ADI/CV2 classification", "ADI mengukur jarak rata-rata antar demand non-zero, sedangkan CV2 mengukur variasi demand. Kombinasi ini menentukan apakah SKU smooth, variable, intermittent, atau lumpy."],
-      ["Inventory logic", "Forecast dipakai untuk menghitung safety stock, reorder point, recommended order, dan simulated service level dengan asumsi lead time dan review period."]
+      ["Inventory logic", "Forecast dipakai untuk menghitung safety stock, reorder point, recommended order, dan service-level scenario dengan asumsi lead time dan review period."]
     ],
     interfaces: [
       ["Forecast console", "SKU list, demand class, historical demand, forecast horizon, confidence band, dan warning jika forecast quality turun."],
@@ -175,7 +187,11 @@ window.projectDetails = {
   },
   "customer-segmentation-recommendation": {
     title: "Customer Segmentation & Recommendation",
-    industry: "Retail",
+    industry: "E-commerce",
+    company: "Juicy Juice (freelance)",
+    period: "Jun 2024 - Nov 2024",
+    repository: "Private/company repository",
+    artifacts: "Public case study, API contract, dashboard/console preview, recommendation evaluation summary",
     summary: "Retail analytics dan recommendation system untuk membagi customer berdasarkan perilaku transaksi, membuat segment profile, dan memberi rekomendasi produk untuk campaign, cross-sell, dan marketing activation.",
     snapshot: {
       problem: "Retail team punya data transaksi, tetapi belum punya segmentasi dan rekomendasi produk yang siap dipakai dalam campaign workflow.",
@@ -233,7 +249,11 @@ window.projectDetails = {
   },
   "credit-scoring-system": {
     title: "Credit Scoring System",
-    industry: "Perbankan",
+    industry: "Fintech / Risiko Kredit",
+    company: "Steradian",
+    period: "Apr 2026 - Jul 2026",
+    repository: "Private/company repository",
+    artifacts: "Public case study, model evaluation summary, API contract, audit flow, architecture diagram, monitoring design",
     summary: "Credit scoring workflow untuk menilai applicant risk, menghasilkan reason codes, mengatur threshold approve/review/decline, dan mencatat audit log untuk underwriting dan model governance.",
     snapshot: {
       problem: "Credit workflow membutuhkan skor yang konsisten, explainable, bisa diaudit, dan punya kontrol terhadap bias data serta kualitas label.",
@@ -291,8 +311,12 @@ window.projectDetails = {
   },
   "aluminium-market-signal": {
     title: "Aluminium Market Signal",
-    industry: "Komoditas",
-    summary: "Market intelligence system untuk membantu tim commercial membaca sinyal pasar aluminium bulanan dan menentukan kapan kondisi pasar perlu diabaikan, dipantau, atau ditindaklanjuti.",
+    industry: "Commodity / Pricing Intelligence",
+    company: "Steradian",
+    period: "Dec 2025 - Mar 2026",
+    repository: "Private/company repository",
+    artifacts: "Public case study, dashboard/console preview, quote decision log schema, feature design, deployment notes",
+    summary: "Market intelligence system untuk membantu tim commercial membaca sinyal pasar aluminium bulanan dan menentukan kapan kondisi pasar berprioritas rendah, perlu dipantau, atau perlu ditindaklanjuti.",
     snapshot: {
       problem: "Prediksi harga komoditas sangat noisy, tetapi tim commercial tetap butuh sinyal praktis untuk quote urgency, watchlist, dan escalation.",
       output: "Monthly actionable market signal, directional context, confidence, market driver explanation, news sentiment, dan quote decision log.",
@@ -300,14 +324,14 @@ window.projectDetails = {
       tech: "Python, time-series features, classification model, LLM news sentiment, FastAPI, BigQuery, Cloud Run Jobs, Cloud Monitoring."
     },
     overview: [
-      "Project ini sengaja tidak mengklaim bisa memprediksi harga aluminium secara presisi. Problem direframe menjadi monthly actionability classification untuk menilai apakah market window cukup penting untuk IGNORE, WATCH, atau ACT.",
+      "Project ini sengaja tidak mengklaim bisa memprediksi harga aluminium secara presisi. Problem direframe menjadi monthly actionability classification untuk menilai apakah market window berprioritas rendah, perlu dipantau, atau perlu ditindaklanjuti.",
       "Sistem memisahkan actionability dari direction. Model utama menilai apakah pasar perlu perhatian, sedangkan directional context memberi overlay bullish, bearish, mixed, atau unclear berdasarkan market drivers dan news sentiment."
     ],
     flow: [
       ["Monthly market data", "Pipeline membaca harga aluminium bulanan, return, volatility, macro indicators, inventory/supply-demand proxy, dan market driver data."],
       ["Feature engineering", "Sistem membuat lag features, rolling return, volatility, momentum, drawdown, macro change, dan calendar features dengan leakage control."],
       ["Target framing", "Label actionable_market_move dibuat dari forward monthly return magnitude sebagai proxy operational actionability."],
-      ["Signal classification", "Model klasifikasi memprediksi probability_actionable_market_move dan memetakannya ke IGNORE, WATCH, atau ACT."],
+      ["Signal classification", "Model klasifikasi memprediksi probability_actionable_market_move dan memetakannya ke prioritas rendah, perlu dipantau, atau perlu ditindaklanjuti."],
       ["Directional overlay", "Recent return direction, market driver interpretation, dan news sentiment memberi directional_context dengan nilai bullish, bearish, mixed, atau unclear."],
       ["Commercial workflow", "Signal dipakai untuk quote urgency, watchlist, market note, dan escalation workflow."],
       ["Feedback loop", "Quote decision log mencatat action, context, dan outcome proxy agar threshold bisa dikalibrasi ulang dengan data bisnis."]

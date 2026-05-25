@@ -22,6 +22,12 @@ window.projectPageTemplate = function projectPageTemplate() {
           <h1 class="detail-title" id="detailTitle"></h1>
           <p class="detail-summary" id="detailSummary"></p>
           <span class="detail-status">End-to-end project case study</span>
+          <div class="detail-meta">
+            <div><strong>Company / Context</strong><span id="detailCompany"></span></div>
+            <div><strong>Period</strong><span id="detailPeriod"></span></div>
+            <div><strong>Repository</strong><span id="detailRepository"></span></div>
+            <div><strong>Public Artifacts</strong><span id="detailArtifacts"></span></div>
+          </div>
         </div>
       </section>
 
