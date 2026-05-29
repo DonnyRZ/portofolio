@@ -2,8 +2,8 @@ window.projectDetails = {
   "b2b-meeting-assistant": {
     title: "B2B Meeting Assistant",
     industry: "B2B SaaS",
-    company: "Steradian",
-    period: "Agu 2025 - Nov 2025",
+    company: "PT Steradian Data Optima",
+    period: "Aug 2025 - Nov 2025",
     repository: "Private/company repository",
     artifacts: "Public case study, realtime transcript workflow, API contract, dashboard/console preview",
     summary: "Asisten meeting untuk membantu tim sales, konsultan, project manager, dan business analyst menangkap keputusan, risiko, action item, dan follow-up saat rapat B2B berjalan.",
@@ -64,15 +64,15 @@ window.projectDetails = {
   "bpjs-claim-assistant": {
     title: "BPJS Claim Assistant",
     industry: "Healthcare / BPJS Claim",
-    company: "Steradian",
+    company: "PT Steradian Data Optima",
     period: "Apr 2025 - Jul 2025",
     repository: "Private/company repository",
     artifacts: "Public case study, API contract, audit logging flow, architecture diagram, structured output schema",
-    summary: "AI-assisted coding workflow untuk membantu coder atau claim officer membaca dokumentasi klinis, menyiapkan saran ICD, memeriksa evidence, dan menilai claim readiness dengan final approval tetap pada manusia.",
+    summary: "AI-assisted coding workflow untuk membantu medical coder, dokter, atau claim officer membaca anamnesis dan dokumentasi klinis, menyiapkan saran ICD, memeriksa evidence, dan menilai claim readiness dengan final approval tetap pada manusia.",
     snapshot: {
       problem: "Clinical coding dan klaim BPJS membutuhkan evidence yang jelas, validasi kode, dan review manusia karena risikonya tinggi.",
       output: "SOAP summary, ICD-10 suggestion, ICD-9-CM procedure suggestion, candidate INA-CBG explanation, validation status, dan review queue.",
-      users: "Clinical coder, claim officer, medical record staff, hospital operations, dan supervisor klaim.",
+      users: "Medical coder, dokter, claim officer, medical record staff, hospital operations, dan supervisor klaim.",
       tech: "Gemini API, Google Cloud Speech-to-Text, JSON schema validation, ICD master data, human review workflow, audit log, Cloud Run, BigQuery."
     },
     overview: [
@@ -80,7 +80,7 @@ window.projectDetails = {
       "Workflow mengutamakan structured output, master data validation, evidence alignment, human approval, reference versioning, audit trail, dan privacy control untuk data klinis."
     ],
     flow: [
-      ["Clinical note input", "User memasukkan SOAP, discharge summary, OCR text, atau supporting note dari episode perawatan."],
+      ["Clinical note input", "User memasukkan anamnesis, SOAP, discharge summary, OCR text, transcript, atau supporting note dari episode perawatan."],
       ["Clinical summarization", "LLM membuat SOAP summary terstruktur dengan evidence yang berasal dari dokumen input."],
       ["ICD suggestion", "LLM memberi saran ICD-10 diagnosis dan ICD-9-CM procedure dalam JSON schema, lengkap dengan alasan dan evidence."],
       ["Reference validation", "Kode dicek terhadap ICD master data, code status, reference version, dan required fields."],
@@ -126,7 +126,7 @@ window.projectDetails = {
   "demand-forecasting-system": {
     title: "Demand Forecasting System",
     industry: "Demand Planning",
-    company: "Juicy Juice (freelance)",
+    company: "Juicy Juice",
     period: "Dec 2024 - Mar 2025",
     repository: "Private/company repository",
     artifacts: "Public case study, forecasting workflow, evaluation summary, architecture diagram, monitoring plan",
@@ -188,7 +188,7 @@ window.projectDetails = {
   "customer-segmentation-recommendation": {
     title: "Customer Segmentation & Recommendation",
     industry: "E-commerce",
-    company: "Juicy Juice (freelance)",
+    company: "Juicy Juice",
     period: "Jun 2024 - Nov 2024",
     repository: "Private/company repository",
     artifacts: "Public case study, API contract, dashboard/console preview, recommendation evaluation summary",
@@ -250,8 +250,8 @@ window.projectDetails = {
   "credit-scoring-system": {
     title: "Credit Scoring System",
     industry: "Fintech / Risiko Kredit",
-    company: "Steradian",
-    period: "Apr 2026 - Jul 2026",
+    company: "PT Steradian Data Optima",
+    period: "Apr 2026 - Present",
     repository: "Private/company repository",
     artifacts: "Public case study, model evaluation summary, API contract, audit flow, architecture diagram, monitoring design",
     summary: "Credit scoring workflow untuk menilai applicant risk, menghasilkan reason codes, mengatur threshold approve/review/decline, dan mencatat audit log untuk underwriting dan model governance.",
@@ -312,7 +312,7 @@ window.projectDetails = {
   "aluminium-market-signal": {
     title: "Aluminium Market Signal",
     industry: "Commodity / Pricing Intelligence",
-    company: "Steradian",
+    company: "PT Steradian Data Optima",
     period: "Dec 2025 - Mar 2026",
     repository: "Private/company repository",
     artifacts: "Public case study, dashboard/console preview, quote decision log schema, feature design, deployment notes",

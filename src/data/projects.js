@@ -2,8 +2,8 @@ window.portfolioProjects = [
   {
     key: "credit-scoring-system",
     title: "Credit Scoring System",
-    company: "Steradian",
-    period: "Apr 2026 - Jul 2026",
+    company: "PT Steradian Data Optima",
+    period: "Apr 2026 - Present",
     domain: "Fintech / Risiko Kredit",
     tags: "Risk Scoring / Governance / Audit",
     href: "./projects/credit-scoring-system.html",
@@ -15,7 +15,7 @@ window.portfolioProjects = [
   {
     key: "aluminium-market-signal",
     title: "Aluminium Market Signal",
-    company: "Steradian",
+    company: "PT Steradian Data Optima",
     period: "Dec 2025 - Mar 2026",
     domain: "Commodity / Pricing Intelligence",
     tags: "Signal ML / Sentiment / Decision Support",
@@ -28,8 +28,8 @@ window.portfolioProjects = [
   {
     key: "b2b-meeting-assistant",
     title: "B2B Meeting Assistant",
-    company: "Steradian",
-    period: "Agu 2025 - Nov 2025",
+    company: "PT Steradian Data Optima",
+    period: "Aug 2025 - Nov 2025",
     domain: "B2B SaaS",
     tags: "Realtime AI / LLMOps / Desktop UX",
     href: "./projects/b2b-meeting-assistant.html",
@@ -41,7 +41,7 @@ window.portfolioProjects = [
   {
     key: "bpjs-claim-assistant",
     title: "BPJS Claim Assistant",
-    company: "Steradian",
+    company: "PT Steradian Data Optima",
     period: "Apr 2025 - Jul 2025",
     domain: "Healthcare / BPJS Claim",
     tags: "Structured Output / Human Review / Audit",
@@ -54,7 +54,7 @@ window.portfolioProjects = [
   {
     key: "demand-forecasting-system",
     title: "Demand Forecasting System",
-    company: "Juicy Juice (freelance)",
+    company: "Juicy Juice",
     period: "Dec 2024 - Mar 2025",
     domain: "Demand Planning",
     tags: "Forecasting / Inventory / MLOps",
@@ -67,7 +67,7 @@ window.portfolioProjects = [
   {
     key: "customer-segmentation-recommendation",
     title: "Customer Segmentation & Recommendation",
-    company: "Juicy Juice (freelance)",
+    company: "Juicy Juice",
     period: "Jun 2024 - Nov 2024",
     domain: "E-commerce",
     tags: "RFM / Recommendation / API",
