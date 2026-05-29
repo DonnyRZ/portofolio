@@ -22,8 +22,8 @@
 h1 {
   max-width: 860px;
   margin: 0;
-  font-size: clamp(3.7rem, 8vw, 7.4rem);
-  line-height: 1.02;
+  font-size: clamp(3rem, 5.6vw, 5.8rem);
+  line-height: 1.05;
   letter-spacing: 0;
   font-weight: 780;
 }

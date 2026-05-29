@@ -370,5 +370,64 @@ window.projectDetails = {
       ["Deployment", "FastAPI API di Cloud Run, batch scoring di Cloud Run Jobs, data/logs di BigQuery, artifacts di Cloud Storage, metadata di Cloud SQL, secrets di Secret Manager, dan alerts di Cloud Monitoring."]
     ],
     limitations: "actionable_market_move adalah proxy dari forward monthly return magnitude, bukan realized margin atau quote conversion. Directional context adalah overlay, bukan trading advice. Threshold idealnya dikalibrasi ulang dengan quote win rate, margin impact, escalation history, dan pricing committee decisions."
+  },
+  "rainfall-prediction-citarum": {
+    title: "Rainfall Prediction - DAS Citarum Hulu",
+    industry: "Water Resources",
+    company: "PT LAPI ITB",
+    period: "Dec 2023 - Feb 2024",
+    repository: "Private/company repository",
+    artifacts: "Public case study, model evaluation summary, feature design, Streamlit app preview",
+    summary: "Model prediksi curah hujan untuk DAS Citarum Hulu menggunakan data BMKG 2000-2019, feature engineering cuaca, evaluasi model regresi, dan aplikasi Streamlit untuk eksplorasi hasil prediksi.",
+    snapshot: {
+      problem: "Analisis hidrologi membutuhkan estimasi curah hujan yang bisa diuji dengan data historis, dibandingkan antar model, dan dipahami oleh tim teknis.",
+      output: "Prediksi curah hujan, perbandingan performa model, metric RMSE/MAE/R-squared, visualisasi data, dan aplikasi eksplorasi hasil prediksi.",
+      users: "Tim water resources, hydrology analyst, civil/water engineer, dan stakeholder teknis.",
+      tech: "Python, Pandas, scikit-learn, XGBoost, Random Forest, AdaBoost, Gradient Boosting, Streamlit, data BMKG 2000-2019."
+    },
+    overview: [
+      "Project ini berfokus pada prediksi curah hujan di DAS Citarum Hulu dengan pendekatan machine learning regression. Dataset berasal dari data historis BMKG periode 2000-2019 yang diproses menjadi fitur cuaca untuk training dan evaluasi model.",
+      "Output tidak diposisikan sebagai keputusan hidrologi final. Model digunakan sebagai alat bantu analisis untuk membandingkan pola historis, performa pendekatan ML, dan kelayakan visualisasi hasil prediksi."
+    ],
+    flow: [
+      ["Data collection", "Menggunakan data historis BMKG 2000-2019 yang relevan dengan wilayah DAS Citarum Hulu."],
+      ["Data preparation", "Membersihkan missing value, memeriksa rentang nilai cuaca, menyelaraskan tanggal, dan menyiapkan target curah hujan."],
+      ["Feature engineering", "Menyusun fitur temporal dan cuaca seperti lag, rolling statistics, tren historis, serta variasi musiman."],
+      ["Model training", "Menguji Random Forest, AdaBoost, Gradient Boosting, dan XGBoost untuk memprediksi curah hujan."],
+      ["Model evaluation", "Membandingkan performa model menggunakan RMSE, MAE, R-squared, residual pattern, dan visualisasi prediksi vs aktual."],
+      ["Result exploration", "Membuat aplikasi Streamlit untuk melihat input, prediksi, grafik historis, dan ringkasan metric model."]
+    ],
+    techStack: [
+      ["Data", "Data BMKG 2000-2019, Python, Pandas, NumPy, dan preprocessing pipeline untuk time-series tabular weather data."],
+      ["Machine Learning", "Random Forest, AdaBoost, Gradient Boosting, XGBoost, train/test split berbasis waktu, dan model evaluation."],
+      ["Evaluation", "RMSE, MAE, R-squared, visual comparison, residual check, dan sanity check terhadap pola musiman."],
+      ["Interface", "Streamlit app untuk eksplorasi hasil prediksi, visualisasi curah hujan historis, dan perbandingan metric model."],
+      ["Artifacts", "Feature design, evaluation summary, model comparison, visualisasi hasil, dan catatan keterbatasan data."]
+    ],
+    aiDetails: [
+      ["Regression framing", "Masalah diposisikan sebagai supervised regression untuk memperkirakan nilai curah hujan berdasarkan fitur historis dan cuaca."],
+      ["Tree-based models", "Random Forest, AdaBoost, Gradient Boosting, dan XGBoost dipakai karena kuat untuk hubungan non-linear pada data tabular."],
+      ["Time-aware validation", "Evaluasi memperhatikan urutan waktu agar hasil tidak terlalu optimistis akibat kebocoran informasi dari periode masa depan."],
+      ["Feature interpretation", "Analisis fitur digunakan untuk memahami variabel yang paling berpengaruh terhadap prediksi model."]
+    ],
+    interfaces: [
+      ["Streamlit app", "Halaman eksplorasi untuk melihat data historis, memilih model, melihat prediksi, dan membaca metric evaluasi."],
+      ["Model comparison view", "Ringkasan performa beberapa model dengan RMSE, MAE, dan R-squared."],
+      ["Prediction chart", "Grafik perbandingan prediksi dan aktual untuk membantu validasi visual."],
+      ["Data quality view", "Ringkasan missing value, rentang tanggal, dan distribusi target curah hujan."]
+    ],
+    evaluation: [
+      ["Regression metrics", "RMSE, MAE, dan R-squared digunakan untuk menilai error prediksi dan kemampuan model menjelaskan variasi target."],
+      ["Model comparison", "Perbandingan model tree-based dilakukan untuk melihat pendekatan yang paling stabil pada data historis."],
+      ["Visual validation", "Grafik prediksi vs aktual digunakan untuk mengecek apakah model mengikuti pola besar atau hanya bagus secara metric."],
+      ["Data limitation", "Evaluasi mencatat keterbatasan data historis, cakupan stasiun, missing value, dan risiko generalisasi untuk periode ekstrem."]
+    ],
+    operations: [
+      ["Reproducibility", "Pipeline menyimpan tahapan preprocessing, feature engineering, training, dan evaluation agar hasil bisa ditelusuri ulang."],
+      ["Model artifact", "Model terbaik dan ringkasan metric disiapkan sebagai artifact untuk analisis lanjutan."],
+      ["Technical documentation", "Catatan data, asumsi, metric, dan keterbatasan disusun agar hasil dapat dipahami oleh tim teknis."],
+      ["App delivery", "Aplikasi Streamlit digunakan sebagai interface eksplorasi internal untuk meninjau hasil model dan visualisasi."]
+    ],
+    limitations: "Model bergantung pada kualitas dan cakupan data BMKG 2000-2019. Prediksi curah hujan tidak menggantikan analisis hidrologi lengkap, tidak mencakup semua faktor klimatologis ekstrem, dan perlu validasi tambahan sebelum dipakai untuk keputusan teknis berisiko tinggi."
   }
 };

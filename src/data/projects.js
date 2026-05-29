@@ -76,5 +76,18 @@ window.portfolioProjects = [
     problem: "Data transaksi belum otomatis berubah menjadi segment customer dan rekomendasi produk yang bisa dipakai campaign.",
     solution: "RFM + KMeans untuk segmentasi dan item-based collaborative filtering dengan segment-aware fallback.",
     highlight: "StandardScaler, KMeans, cosine similarity, Hit Rate@K, Recall@K, MAP@K, NDCG@K, FastAPI, dan Cloud Run."
+  },
+  {
+    key: "rainfall-prediction-citarum",
+    title: "Rainfall Prediction - DAS Citarum Hulu",
+    company: "PT LAPI ITB",
+    period: "Dec 2023 - Feb 2024",
+    domain: "Water Resources",
+    tags: "Rainfall Prediction / ML / Streamlit",
+    href: "./projects/rainfall-prediction-citarum.html",
+    summary: "Model prediksi curah hujan untuk DAS Citarum Hulu berbasis data BMKG dan aplikasi eksplorasi hasil prediksi.",
+    problem: "Analisis hidrologi membutuhkan estimasi curah hujan yang bisa diuji dengan data historis dan dipahami oleh tim teknis.",
+    solution: "Feature engineering cuaca, pengujian Random Forest, AdaBoost, Gradient Boosting, dan XGBoost, lalu evaluasi RMSE, MAE, dan R-squared.",
+    highlight: "Python, scikit-learn, XGBoost, data BMKG 2000-2019, model evaluation, dan aplikasi Streamlit."
   }
 ];
